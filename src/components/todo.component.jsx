@@ -45,14 +45,14 @@ function Todo() {
           type="textbox"
           className="form-control"
           placeholder="Task"
+          onKeyDown={(e) => {
+            if (e.keyCode === 13) {
+              addTotoItem();
+            }
+          }}
         ></input>
       </div>
-      <button
-        onKeyUp={(e) => e.target.key}
-        type="button"
-        className="btn btn-light"
-        onClick={addTotoItem}
-      >
+      <button type="button" className="btn btn-light" onClick={addTotoItem}>
         Add Task
       </button>
       <hr></hr>
