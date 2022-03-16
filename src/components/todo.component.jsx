@@ -47,7 +47,12 @@ function Todo() {
           placeholder="Task"
         ></input>
       </div>
-      <button type="button" className="btn btn-light" onClick={addTotoItem}>
+      <button
+        onKeyUp={(e) => e.target.key}
+        type="button"
+        className="btn btn-light"
+        onClick={addTotoItem}
+      >
         Add Task
       </button>
       <hr></hr>
